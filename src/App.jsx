@@ -4,6 +4,7 @@ import Filter from './components/Filter'
 import Items from './components/Items'
 import Mapitem from './components/Mapitem'
 import Useeffect from './components/Useeffect'
+import Fatchdata from './Fatchdata'
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
 
       {/* <Mapitem /> */}
       {/* <Filter /> */}
-      <Useeffect />
+      {/* <Useeffect /> */}
+      <Fatchdata />
     </>
   )
 }
