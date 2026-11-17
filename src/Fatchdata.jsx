@@ -1,41 +1,33 @@
-import React, { useEffect, useState } from 'react'
-import Useeffect from './components/Useeffect'
+import { useEffect, useState } from 'react'
 
 const Fatchdata = () => {
-    const [product, setProduct] = useState([])
+
+    const [product, setproduct] = useState([])
     useEffect(() => {
-        const fare = async () => {
+        const ad = async () => {
             const api = await fetch("https://dummyjson.com/products")
             const data = await api.json()
-            // console.log(data);
-            setProduct(data.products)
+            console.log(data);
+            setproduct(data.products)
         }
-        fare()
-
+        ad()
     }, [])
-
-
-
-    useEffect(() => {
-        const ra = async () => {
-            const api = await fetch("link")
-            const data = await api.json()
-            setProduct(data)
-        }
-
-        ra()
-    }, [])
-
 
     return (
-        <div>{product.map((item) => (
-            <div className="" key={item.id}>
-                <h2>{item.title}</h2>
-                <h3>{item.price}</h3>
-            </div>
-        )
+        <>
+            <div >
+                {product.map((s) => {
+                    return (
 
-        )}</div>
+                        <div className="" key={s.id}>
+                            <h3>{s.price}</h3>
+                        </div>
+                    )
+
+                })}
+
+            </div>
+        </>
     )
 }
 
