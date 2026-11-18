@@ -12,6 +12,20 @@ const Useeffect = () => {
 
     }, [counter])
 
+    const [dark, setdark] = useState(false)
+
+    useEffect(() => {
+        document.body.style.background = dark ? "#fff" : "#222"
+        document.body.style.background = dark ? "#222" : "#fff"
+
+    }, [dark])
+
+
+
+
+
+
+
 
     return (
         <>
@@ -26,6 +40,10 @@ const Useeffect = () => {
 
                     <h3 className='bg-red-500 text-white w-10 absolute top-0 right-0'>{counter}</h3>
                 )}
+            </div>
+
+            <div className={dark ? "text-white" : "text-black"}>
+                <button onClick={() => setdark(!dark)}>{dark ? "light" : "dark"}</button>
             </div>
 
         </>
