@@ -20,6 +20,7 @@ function App() {
       <Useeffect />
       {/* <Fatchdata /> */}
       <Fromhandling />
+      <Items />
     </>
   )
 }

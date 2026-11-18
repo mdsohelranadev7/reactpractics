@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Fromhandling = () => {
 
@@ -14,12 +14,26 @@ const Fromhandling = () => {
     }
 
 
+    const [dark, setdark] = useState(false)
+
+    useEffect(() => {
+
+        document.body.style.background = dark ? "#fff" : "#111"
+        document.body.style.background = dark ? "#111" : "#fff"
+
+
+
+    }, [dark])
 
 
 
 
 
-    
+
+
+
+
+
     return (
         <>
             <form onSubmit={vla}>
@@ -35,9 +49,9 @@ const Fromhandling = () => {
                 <input type="submit" value={"submit"} />
             </form>
 
-            <div className="">
-                <button>Dark</button>
-            </div>
+            <div className={dark ? "text-white" : "text-black"}>
+                <button onClick={() => setdark(!dark)}>{dark ? "light" : "dark"}</button>
+            </div >
 
         </>
 

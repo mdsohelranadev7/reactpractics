@@ -1,4 +1,5 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import Useeffect from './Useeffect'
 
 const Items = () => {
 
@@ -15,6 +16,23 @@ const Items = () => {
 
     //     change === "hello" ? setchange("sohel") : setchange("hello")
 
+
+    const [productt, setproductt] = useState([])
+
+    useEffect(( ) => {
+        const ala = async () => {
+
+            const api = await fetch("https://dummyjson.com/products")
+            const data = await api.json()
+
+            console.log(data);
+
+            setproductt(data.products)
+
+        }
+        ala()
+
+    }, [])
 
 
 
@@ -55,7 +73,26 @@ const Items = () => {
             <button onClick={sks} disabled={block}>increment</button>
             <button onClick={sa} disabled={mi}>increment</button>
             <button onClick={sae}>reset</button>
+
+
+
+            <div className="">
+                {productt.map((it) => {
+                    return (
+
+                        <div className="" key={it.id}>
+                            <h2>{it.price}</h2>
+                        </div>
+                    )
+
+                })}
+
+
+
+            </div>
         </>
+
+
     )
 }
 
