@@ -13,6 +13,13 @@ const Fromhandling = () => {
         console.log(name, email, password);
     }
 
+
+
+
+
+
+
+    
     return (
         <>
             <form onSubmit={vla}>
