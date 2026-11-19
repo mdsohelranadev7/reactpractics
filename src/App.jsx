@@ -6,6 +6,7 @@ import Items from './components/Items'
 import Mapitem from './components/Mapitem'
 import Useeffect from './components/Useeffect'
 import Fatchdata from './components/Fatchdata'
+import Newid from './components/Newid'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       {/* <Fatchdata /> */}
       <Fromhandling />
       <Items />
+      <Newid/>
     </>
   )
 }

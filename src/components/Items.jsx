@@ -19,7 +19,7 @@ const Items = () => {
 
     const [productt, setproductt] = useState([])
 
-    useEffect(( ) => {
+    useEffect(() => {
         const ala = async () => {
 
             const api = await fetch("https://dummyjson.com/products")
@@ -58,16 +58,40 @@ const Items = () => {
         }
 
     }
-
-
     const sae = () => {
         setince(0)
     }
 
 
+    const persons = [
+        { id: 1, name: "sohelsdfsdfdsf rana", active: true, price: 383 },
+        { id: 3, name: "milon", active: false, price: 480 },
+        { id: 2, name: "shamim", active: true, price: 520 },
+        { id: 3, name: "firoz", active: false, price: 490 },
+        { id: 4, name: "rayhan", active: true, price: 4150 },
+        { id: 2, name: "sakil", active: true, price: 4450 },
+    ]
+
+
 
     return (
         <>
+
+            <div className="">
+                {persons.filter((s) => s.active).map((f) => {
+                    return (
+                        <div className="" key={f.id}>
+                            <h4>{f.name}</h4>
+                        </div>
+
+                )
+                })
+                }
+            </div>
+
+
+
+
             {/* <button onClick={sls}>{change}</button> */}
             <h2>{ince}</h2>
             <button onClick={sks} disabled={block}>increment</button>
