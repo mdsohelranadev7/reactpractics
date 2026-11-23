@@ -18,10 +18,10 @@ function App() {
 
       {/* <Mapitem /> */}
       {/* <Filter /> */}
-      <Useeffect />
+      {/* <Useeffect /> */}
       {/* <Fatchdata /> */}
-      <Fromhandling />
-      <Items />
+      {/* <Fromhandling /> */}
+      {/* <Items /> */}
       <Newid/>
     </>
   )
