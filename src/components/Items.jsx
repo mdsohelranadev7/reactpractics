@@ -83,7 +83,6 @@ const Items = () => {
                         <div className="" key={f.id}>
                             <h4>{f.name}</h4>
                         </div>
-
                 )
                 })
                 }

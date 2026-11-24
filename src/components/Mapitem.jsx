@@ -9,17 +9,17 @@ const Mapitem = () => {
         { name: "redmi", price: 9000, camera: "40mp" },
     ]
     return (
-        <div className="">
-            {newitem.map((s, index) => {
-                return (
-                    <div className="" key={s.name}>
-                        <h3>{s.price}</h3>
-                    </div>
-                )
-
-            })
+        <>
+            {
+                newitem.map((s) => {
+                    return (
+                        <div className="" key={s.name}>
+                            <h3>{s.price}</h3>
+                        </div>
+                    )
+                })
             }
-        </div>
+        </>
 
 
     )
